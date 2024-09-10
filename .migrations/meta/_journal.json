@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1725990862049,
+      "tag": "0000_aspiring_trauma",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1725991179242,
+      "tag": "0001_large_groot",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1725992082916,
+      "tag": "0002_conscious_bug",
+      "breakpoints": true
+    }
+  ]
+}
