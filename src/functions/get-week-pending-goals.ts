@@ -50,7 +50,7 @@ export async function getWeekPendingGoals() {
         .leftJoin(goalCompletionCounts, eq(goalCompletionCounts.goalId, goalsCreatedUpToWeek.id))
         .where(sql`${goalsCreatedUpToWeek.desiredWeeklyFrequency} <> COALESCE(${goalCompletionCounts.completionCount}, 0)`);
 
-    const everyGoals = await db
+    const getGoals = await db
         .with(goalsCreatedUpToWeek, goalCompletionCounts)
         .select({
             id: goalsCreatedUpToWeek.id,
@@ -65,6 +65,6 @@ export async function getWeekPendingGoals() {
 
     return {
         pendingGoals,
-        everyGoals
+        getGoals
     }
 }
