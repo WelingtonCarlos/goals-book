@@ -1,6 +1,6 @@
 import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
-import { createGoalCompletion } from '../../functions/create-goals-completion'
-import { createCompletionSchema } from '../../utils/validations'
+import { createGoalCompletion } from '../../../functions/create-goals-completion'
+import { createCompletionSchema } from '../../../utils/validations'
 
 export const createCompletionRoute: FastifyPluginAsyncZod = async (app) => {
     app.post('/create-completion', {
