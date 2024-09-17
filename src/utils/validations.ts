@@ -19,3 +19,8 @@ export const createGoalSchema = z.object({
 export const createCompletionSchema = z.object({
     goalId: z.string()
 })
+
+export const loginSchema = z.object({
+    email: z.string().email(),
+    password: z.string().min(6),
+});
